@@ -1,0 +1,71 @@
+@use "../sass/base/base-index" as *;
+.card-container {
+    width: 350px;
+    border: 1px solid rgb(229, 232, 235);;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &:hover {
+        box-shadow: rgba(4, 17, 29, 0.25) 0px 0px 8px 0px;
+        transition: all 0.1s ease 0s;
+        transform: scale(1.02);
+    }
+    img {
+        object-fit: contain;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 0px;
+    }
+}
+.card-info {
+    width: 100%;
+    height: 80px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    
+
+    span {
+        display: block;
+        font-size: 12px;
+
+    }
+}
+.card-info-top, .card-info-middle, .card-info-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.collection-name {
+    font-weight: 600;
+    color: $dark-gray;
+}
+.collection-id {
+    font-weight: 800;
+}
+.eth-price {
+    font-size: 14px !important;
+    font-weight: 800;
+    line-height: 1.5;
+}
+.time-left {
+    margin-left: auto;
+}
+
+.card-footer {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+    background: rgba(0, 0, 0, 0) linear-gradient(rgba(229, 232, 235, 0.392) 0%, rgb(255, 255, 255) 20%) repeat scroll 0% 0%;
+
+    span {
+        font-weight: 600;
+        color: $dark-gray;
+        font-size: 16px;
+    }
+}
