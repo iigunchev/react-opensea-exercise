@@ -1,9 +1,9 @@
-export default const nfts = [
-    { 
-        collection:,
-        id:,
-        price:,
-        img:,
-        
-    }
-]
+// export default const nfts = [
+//     { 
+//         collection:,
+//         id:,
+//         price:,
+//         img:,
+
+//     }
+// ]

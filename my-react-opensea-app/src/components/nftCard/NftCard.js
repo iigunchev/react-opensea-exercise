@@ -1,8 +1,25 @@
 import React from 'react';
+import FavoriteIconButton from "../FavoriteIconButtony";
 import "./NftCard.scss"
 
-export default function NftCard({ img, collection, collectionId, price, timeLeft }) {
+export default function NftCard({ 
+    id,
+    img, 
+    collection, 
+    collectionId, 
+    price, 
+    timeLeft, 
+    isFavorite, 
+    favCount, 
+    handleSetFavorite 
+}) {
+
+    function onSetFavorite() {
+        handleSetFavorite(id);
+      }
+
     return (
+
         <article>
             <div className="card-container">
                 <img src={img} alt=""/>
@@ -20,8 +37,11 @@ export default function NftCard({ img, collection, collectionId, price, timeLeft
                     </div>
                 </section>
                 <footer className="card-footer">
-                <span class="material-icons">favorite_border</span>
-                <span className="card-likes-counter">7</span>
+                <FavoriteIconButton 
+                    handleSetFavorite={onSetFavorite}
+                    isFavorite={isFavorite}
+                />
+                <span className="card-likes-counter">{favCount}</span>
                 </footer>
             </div>
         </article>
